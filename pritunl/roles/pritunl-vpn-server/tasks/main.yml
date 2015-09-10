@@ -1,0 +1,7 @@
+- copy: src=pritunl.repo dest=/etc/yum.repos.d/pritunl.repo
+- command: gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys CF8E292A
+- shell: gpg --armor --export CF8E292A > /tmp/CF8E292A.tmp
+- rpm_key: state=present key=/tmp/CF8E292A.tmp
+- yum: name=pritunl
+- service: name=pritunl state=started enabled=yes
+

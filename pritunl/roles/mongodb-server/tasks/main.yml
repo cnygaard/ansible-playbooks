@@ -1,0 +1,2 @@
+- yum: name=mongodb-server
+- service: name=mongod state=started enabled=yes 

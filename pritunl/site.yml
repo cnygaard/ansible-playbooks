@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-client
+    - mongodb-server
+    - pritunl-vpn-server
